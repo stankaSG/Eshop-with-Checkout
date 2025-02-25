@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Everyone, Everyday - Conditioner for everyday use - 250 ml",
+     "price": 15.60,
+    "image": "static/assets/everyday.jpg",
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Date With Exfoliate - Enzymatic Shampoo - 500ml",
+    "price": 19.60,
+    "image": "static/assets/exfoliate.jpg",
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "Who Is She? - Lamellar Water - 100ml",
+    "price": 9.40,
+    "image": "static/assets/whoisshe.jpg",
+    "quantity": 1
+  }
+]

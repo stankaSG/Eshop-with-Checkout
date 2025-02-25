@@ -1,0 +1,76 @@
+{% include "header.html" %}
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ url_for('static', filename='assets/everyday.jpg') }}" alt="..." /></div>
+                    <div class="col-md-6">
+                        <h1 class="display-5 fw-bolder">Everyone, Everyday - Conditioner for everyday use - 250 ml</h1>
+                        <div class="fs-5 mb-5">
+                            <span class="text-decoration-line-through">18,00 €</span>
+                            <span>15,60 €</span>
+                        </div>
+                        <p class="lead">
+                        HairTry - Everyone, Everyday
+                        Conditioner for daily use for all hair types from HairTry -
+                        softening conditioner, suitable for all hair types. It has fresh and at the same time
+                        elegant fragrance.
+                        </p>
+                        <form action="{{ url_for('add_to_cart', product_id=product_id) }}" method="post">
+                            <div class="d-flex">
+                                <input class="form-control text-center me-3" name="quantity" type="number" value="1" min="1" style="max-width: 3rem" />
+                                <button class="btn btn-outline-dark flex-shrink-0" type="submit">
+                                <i class="bi-cart-fill me-1"></i>
+                                 Add to cart
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- NOVÁ SEKCIA: Popis pod produktom -->
+                <div class="row gx-4 gx-lg-5 mt-4">
+                    <div class="col-md-12">
+                        <!-- Bootstrap Tabs -->
+                        <ul class="nav nav-tabs" id="productTabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="ingredients-tab" data-bs-toggle="tab" href="#ingredients">Ingredients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="usage-tab" data-bs-toggle="tab" href="#usage">Use</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content mt-3">
+                            <!-- Ingredients -->
+                            <div class="tab-pane fade show active" id="ingredients">
+                                <p>
+                                    Among other ingredients, it contains broccoli seed oil,
+                                    which has a similar effect to silicone, significantly smooths the hair and protects it from external factors
+                                    influences. It also contains panthenol, which as a moisturizer helps to maintain the correct level
+                                    moisture and regenerates hair fibers. Hydrolyzed jojoba esters smooth the hair and
+                                    in addition, they protect dyed hair from color loss. The combination of these ingredients creates a mixture
+                                    ideal for everyone, for daily use, which will take care of hydration and shine.
+                                </p>
+                                <p><strong>Ingredients:</strong> Water, Broccoli oil, Panthenol, Hydrolyzed jojoba esters, Glycerin, Vitamin E, Natural fragrances.</p>
+                            </div>
+
+                            <!-- Use: -->
+                            <div class="tab-pane fade" id="usage">
+                                <p><strong>Use:</strong> Apply the conditioner to shampooed and damp hair. Comb the preparation with a brush with wide teeth or a comb. Leave on for a few minutes and then rinse with water.</p>
+                                <p><strong>Volume:</strong> 250 ml</p>
+                                <p><strong>Expiry date:</strong> 6 months after opening.</p>
+                                <p><strong>Country of origin:</strong> Poland.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         {% include "footer.html" %}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+</html>

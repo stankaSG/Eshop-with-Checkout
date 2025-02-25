@@ -1,0 +1,81 @@
+{% include "header.html" %}
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ url_for('static', filename='assets/exfoliate.jpg') }}" alt="..." /></div>
+                    <div class="col-md-6">
+                        <h1 class="display-5 fw-bolder">Date With Exfoliate - Enzymatic Shampoo - 500ml</h1>
+                        <div class="fs-5 mb-5">
+                            <span class="text-decoration-line-through">22,60 €</span>
+                            <span>19,60 €</span>
+                        </div>
+                        <p class="lead">
+                        HairTry - Date With Exfoliate
+                        Multifunctional enzyme shampoo with ficin
+                        HairTry - Date With Exfoliate - a specialized enzyme shampoo.
+                        It provides multifunctional action - effectively cleanses and removes
+                        dead skin cells. It isan ideal solution for those who do not have
+                        time to perform regular scrubbing of the scalp. It is enough to leave
+                        the foam from the shampoo for a longer time to enjoy the exfoliating effect.
+                        </p>
+                        <form action="{{ url_for('add_to_cart', product_id=product_id) }}" method="post">
+                            <div class="d-flex">
+                                <input class="form-control text-center me-3" name="quantity" type="number" value="1" min="1" style="max-width: 3rem" />
+                                <button class="btn btn-outline-dark flex-shrink-0" type="submit">
+                                <i class="bi-cart-fill me-1"></i>
+                                 Add to cart
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- NOVÁ SEKCIA: Popis pod produktom -->
+                <div class="row gx-4 gx-lg-5 mt-4">
+                    <div class="col-md-12">
+                        <!-- Bootstrap Tabs -->
+                        <ul class="nav nav-tabs" id="productTabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="ingredients-tab" data-bs-toggle="tab" href="#ingredients">Ingredients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="usage-tab" data-bs-toggle="tab" href="#usage">Use</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content mt-3">
+                            <!-- Ingredients -->
+                            <div class="tab-pane fade show active" id="ingredients">
+                                <p>
+                                   It contains ficin - an enzyme from figs - and Keratoline™C PS, which leave the skin
+                                    smooth and refreshed. The use of mixed surfactants (anionic, amphoteric and non-ionic)
+                                  provides a feeling of thorough cleansing without causing irritation or dryness. The product
+                                  bounces hair from the root and adds volume. When used regularly, it prolongs the freshness
+                                  of the hairstyle. It is helpful in the fight against oily dandruff and in the care of seborrheic
+                                  scalp. It has a gel formula that creates a creamy lather and spreads well. Its fresh, slightly
+                                  perfumery scent makes application more pleasant. The product has a large, efficient packaging,
+                                  which was created from 98% eco-friendly rPET material.
+                                </p>
+                                <p><strong>Ingredients:</strong> Ficin, Keratoline™C PS, anionic surfactants, amphoteric surfactants, non-ionic surfactants.</p>
+                            </div>
+
+                            <!-- Use: -->
+                            <div class="tab-pane fade" id="usage">
+                                <p><strong>Use:</strong> Take an appropriate amount of shampoo and lather it in your hands. Spread over the scalp and massage in circular motions for a minute, then rinse. Repeat the process, leaving the lather for 7-10 minutes the second time. Use no more than once a week. Avoid contact with eyes.</p>
+                                <p><strong>Volume:</strong> 500 ml</p>
+                                <p><strong>Expiry date:</strong> 12 months after opening.</p>
+                                <p><strong>Country of origin:</strong> Poland.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         {% include "footer.html" %}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
